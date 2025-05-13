@@ -6,3 +6,4 @@
 /jars
 *test*
 *example*
+*.pyc
