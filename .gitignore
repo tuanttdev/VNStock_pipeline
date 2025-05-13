@@ -1,0 +1,8 @@
+/.venv
+/.idea
+/logs
+/log_services
+/airflow-*
+/jars
+*test*
+*example*
