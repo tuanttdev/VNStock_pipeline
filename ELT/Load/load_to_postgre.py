@@ -231,5 +231,5 @@ def update_company() :
         conn.close()
 
 # delete_table('price_board')
-load_matching_data_to_postgres(symbol ="PVI")
+# load_matching_data_to_postgres(symbol ="PVI")
 # update_company()

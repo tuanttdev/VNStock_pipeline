@@ -6,4 +6,6 @@
 /jars
 *test*
 *example*
+__pycache__/
 *.pyc
+*Zone.iden*

@@ -75,17 +75,17 @@ with DAG(
         print(f'{symbol}')
         try:
             t = datetime.now().time()
-
+            print(t)
             if time(11, 30) <= t <= time(12, 0):
                 print(" Skipping (outside 9:00–11:30)")
                 return
             else:
                 print('running task')
+                load_matching_data_to_postgres(symbol=symbol)
 
         except Exception as e:
             print(e)
         # Gọi API vnstock theo symbol
-        load_matching_data_to_postgres(symbol=symbol)
 
 
     # Dynamic task mapping

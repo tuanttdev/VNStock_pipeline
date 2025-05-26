@@ -1,7 +1,9 @@
+import time
+
 import vnstock
 from datetime import datetime
 
-defaultSymbolStock = 'VHM'
+defaultSymbolStock = 'TCB'
 dataSource = 'VCI'
 
 def extract_company_list():
@@ -25,11 +27,20 @@ def extract_matching_data(symbol=defaultSymbolStock, last_time = None):
     # last_time = int(datetime.now().timestamp() )
     # print(last_time)
 
-    intraday = vnstock.Vnstock().stock(symbol=symbol, source=dataSource).quote.intraday(symbol=symbol, page_size=1000 , last_time=last_time)
-
+    intraday = vnstock.Vnstock().stock(symbol=symbol, source=dataSource).quote.intraday(symbol=symbol, page_size=10000 , last_time=last_time)
+    # print(len(intraday))
     return intraday
 
 def extract_symbol_by_group(symbol=defaultSymbolStock):
     return vnstock.Vnstock().stock(symbol=symbol, source=dataSource).listing.symbols_by_group('VN100')
 
-# print(extract_matching_data())
+# start = time.time()
+# print(start)
+# for i in range(100):
+#     extract_matching_data()
+#
+# print(time.time())
+# print(f'Time: {time.time() - start}')
+#
+
+# 7946

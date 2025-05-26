@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# File này được build trên nền là wsl2 + ubuntu
+# Lệnh explorer.exe là của window mở windows explorer chứ không phải lệnh gốc của unbuntu
 # Đường dẫn virtualenv
 echo "Activate venv ..."
 AIRFLOW_VENV="$HOME/stockpipeline3.10/.venv"
