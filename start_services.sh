@@ -5,7 +5,7 @@
 echo "Activate venv ..."
 AIRFLOW_VENV="$HOME/stockpipeline3.10/.venv"
 source "$AIRFLOW_VENV/bin/activate"
-export AIRFLOW_CONFIG=$HOME/stockpipeline3.10/airflow.cfg
+export AIRFLOW_CONFIG=$HOME/VNStock_pipeline/airflow.cfg
 
 echo "Starting Airflow webserver..."
 airflow webserver --port 8080 > ./log_services/airflow-webserver.log 2>&1 &
